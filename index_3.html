@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atributos de id e class</title>
+
+    <style>
+        h1 {
+        /* Dentro desse bloco mudará alguns atributos de todas 
+            tags h1*/
+        background: blue;
+        }
+        
+        #cabecalho-1 {
+            /* Dentro desse bloco mudará alguns atributos, porém somente
+            dos objetos com a o id "cabeçalho-2"*/
+             background-color: red;
+        }
+        .fundo_marrom {
+            /* Sempre prefira adicionar estilos a classes, como está
+            sendo feito aqui, pois colocando estilos em classes, tudo
+            que tiver aquela classe receberá aquele estilo de forma forçada.
+            Esse caso aqui foi um exemplo, mostrando que tem um estilo sendo
+            aplicado na tag h1, e o estilo adicionado nessa classe fundo_marrom
+            não foi capaz de sobrescrever o primeiro.*/
+            background: brown;
+        }
+        .bold {
+            color: orange;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="cabecalho-1" class="fundo-vermelho borda-esquerda">
+        Cabeçalho 1
+    </h1>
+    <p>
+        Os Ids servem para dar um nome único a esse elemento, 
+        permitindo que ele seja referenciado de forma específica no código.
+    </p>
+    <h1 id="cabecalho-2" class="fundo-marrom">
+        Cabeçalho 2
+    </h1>
+    <p>
+        <b class="bold">As classes também são identificadores de elementos</b>, porém diferente
+        dos Ids, as classes podem ser repetidas em vários elementos, e cada
+        elemento pode ter mais de uma classe também a depender do que se
+        deseja faze com elas. Esse tipo de identificador é muito importante
+        para quando for utilizar o CSS e o JS no seu código.
+    </p>
+</body>
+</html>
