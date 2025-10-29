@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt=BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabelas em HTML</title>
+
+    <style>
+        body{
+            font-family: sans-serif;
+        }
+        table {
+            border-collapse: collapse;
+            width: 800px;
+        }
+        table td, table th{
+            border: 1px solid #ccc;
+            padding: 5px;
+            text-align: left;
+        }
+        table caption{
+            caption-side: bottom;
+            text-align: center;
+            font-style: italic;
+            font-size: 14px;
+            margin: 5px 0;
+        }
+        tfoot td, table th{
+            background: #ddd;
+        }
+
+        .responsive-table{
+            max-width: 100%;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="responsive-table">
+        <table>
+            <caption>Controle de Valor do Estoque</caption>
+            <thead>
+                <tr>
+                    <th>Produto</th>
+                    <th>Quantidade</th>
+                    <th>Preço</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>Abacaxi</td>
+                    <td>10</td>
+                    <td>R$15,00</td>
+                    <td>R$150,00</td>
+                </tr>
+                <tr>
+                    <td>Amora</td>
+                    <td>50</td>
+                    <td>R$40,00</td>
+                    <td>R$2000,00</td>
+                </tr>
+                <tr>
+                    <td>Maracujá</td>
+                    <td>65</td>
+                    <td>R$20,00</td>
+                    <td>R$1300,00</td>
+                </tr>
+                <tr>
+                    <td>Morango</td>
+                    <td>225</td>
+                    <td>R$15,00</td>
+                    <td>R$3375,00</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="3" style="text-align: center;">Total</td>
+                    <td>R$6825,00</td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+</body>
+</html>
